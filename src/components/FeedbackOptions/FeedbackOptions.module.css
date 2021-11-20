@@ -1,0 +1,21 @@
+.list__item {
+}
+
+.list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.list__btn {
+  background-color: teal;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}

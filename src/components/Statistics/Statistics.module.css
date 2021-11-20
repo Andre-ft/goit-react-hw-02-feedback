@@ -1,0 +1,11 @@
+.item {
+  list-style-type: none;
+}
+
+.item:first-letter {
+  text-transform: capitalize;
+}
+
+.list {
+  padding: 0;
+}
