@@ -13,8 +13,8 @@ class App extends Component {
   };
 
   countFeedback = stateKey =>
-    this.setState({ [stateKey]: this.state[stateKey] + 1 });
-  // this.setState(prevState => (prevState[stateKey] += 1));
+    this.setState(prevState => (prevState[stateKey] += 1));
+  // this.setState({ [stateKey]: this.state[stateKey] + 1 });
 
   countTotalFeedback() {
     return Object.values(this.state).reduce((acc, item) => acc + item, 0);
