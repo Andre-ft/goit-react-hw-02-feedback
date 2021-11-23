@@ -21,9 +21,7 @@ class App extends Component {
 
   countPositiveFeedbackPercentage() {
     const { good, neutral, bad } = this.state;
-    const sum = good + neutral + bad;
-    if (sum === 0) return 0;
-    return Math.round((good / sum) * 100);
+    return Math.round((good / (good + neutral + bad)) * 100);
   }
 
   render() {
@@ -40,7 +38,7 @@ class App extends Component {
         </Section>
 
         <Section title="Statistics">
-          {positivFeedbackPercent ? (
+          {totalFeedbacks ? (
             <Statistics
               good={this.state.good}
               neutral={this.state.neutral}
