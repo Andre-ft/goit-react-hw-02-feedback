@@ -23,7 +23,7 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
     const sum = good + neutral + bad;
     if (sum === 0) return 0;
-    return Math.round((good / sum) * 100) + '%';
+    return Math.round((good / sum) * 100);
   }
 
   render() {

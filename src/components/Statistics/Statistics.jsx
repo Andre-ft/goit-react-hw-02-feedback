@@ -13,7 +13,9 @@ const Statistics = props => {
 
         return (
           <li key={prop} className={s.item}>
-            {propName}: {props[prop]}
+            {prop === 'positiveFeedback'
+              ? `${propName} : ${props[prop]} %`
+              : `${propName} : ${props[prop]}`}
           </li>
         );
       })}
